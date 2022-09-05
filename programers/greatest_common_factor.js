@@ -120,7 +120,8 @@ function solution(num1,num2){
         } //base Case
 
     } 
-
+    recursive(min,max)
+    
     return [greatest.reduce((acc,cur)=>acc*cur,1),greatest.reduce((acc,cur)=>acc*cur,1) * endDivide.reduce((acc,cur)=>acc*cur,1) ]
 
 }
