@@ -28,3 +28,12 @@ function solution(n,count=0){
 
 console.log(solution(6))
 
+
+function solution(n,count=0){
+    if(n===1||count>=500 || n===0)return count
+    return n%2===0?solution(n/2,count+1):solution(n*3+1,count+1)
+}
+
+console.log(solution(-1))
+
+
