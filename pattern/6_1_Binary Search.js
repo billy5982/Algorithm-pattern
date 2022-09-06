@@ -70,3 +70,17 @@ function recursiveBinarySearch(arr,value){
     return recur(start,end,middle)
   }
   console.log(recursiveBinarySearch([1,2,3,4,5,6,7,8,9,10,11,12],8))
+
+  //이진 탐색 알고리즘 리팩토링
+  function repacBinarySearch(arr,value){
+    let start = 0;
+    let end = arr.length-1;
+    let middle = Math.floor((start+end)/2)
+    
+    function recur(s,e,m){
+        if(arr[m]===value)return m
+        if(s>e)return -1
+        return value>arr[m]?recur(m+1,e,Math.floor((m+1+e)/2)) : recur(s,m-1,Math.floor((s+m-1)/2))
+    }
+    return recur(start,end,middle)
+  }
