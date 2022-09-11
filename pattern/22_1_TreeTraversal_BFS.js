@@ -90,9 +90,10 @@ class BinarySearchTree{
 }
 
 class Node{
-    constructor(val){
-        this.value = val;
-        this.next = null;
+    constructor(value){
+        this.value = value;
+        this.left = null;
+        this.right = null;
     }
 }
 let tree = new BinarySearchTree();
